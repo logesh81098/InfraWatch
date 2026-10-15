@@ -9,3 +9,7 @@ variable "public-subnet-cidr" {
 variable "availability-zone-1" {
   default = "ap-south-1"
 }
+
+variable "anywhere-ip" {
+  default = "0.0.0.0/0"
+}
