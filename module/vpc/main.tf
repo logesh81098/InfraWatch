@@ -20,6 +20,7 @@ resource "aws_vpc" "infrawatch-vpc" {
 resource "aws_subnet" "public-subnet" {
   vpc_id = aws_vpc.infrawatch-vpc.id
   cidr_block = var.public-subnet-cidr
+  map_public_ip_on_launch = true
   availability_zone = var.availability-zone-1
   tags = {
     Name = "InfraWatch-Public-Subnet"
