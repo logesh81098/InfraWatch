@@ -14,6 +14,6 @@ resource "aws_key_pair" "infrawatch-public-key" {
 }
 
 resource "local_file" "infrawatch-private-key" {
-  filename = "infawatch-private-key"
+  filename = "infrawatch-private-key.pem"
   content = tls_private_key.infrawatch-key.private_key_openssh
 }
