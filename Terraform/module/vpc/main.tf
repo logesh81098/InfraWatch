@@ -22,6 +22,7 @@ resource "aws_subnet" "public-subnet-1" {
   vpc_id = aws_vpc.infrawatch.id
   cidr_block = var.public-subnet-1-cidr
   map_public_ip_on_launch = true
+  availability_zone = var.az1
   tags = {
     Name = "InfraWatch-Public-Subnet-1"
     IAC = "Terraform"

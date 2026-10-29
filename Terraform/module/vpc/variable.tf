@@ -9,3 +9,7 @@ variable "public-subnet-1-cidr" {
 variable "anywhere-ip" {
   default = "0.0.0.0/0"
 }
+
+variable "az1" {
+  default = "ap-south-1a"
+}
