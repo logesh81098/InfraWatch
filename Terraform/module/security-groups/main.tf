@@ -16,7 +16,7 @@ resource "aws_security_group" "infrawatch-sg" {
   egress {
     from_port = 0
     to_port = 0
-    protocol = "tcp"
+    protocol = "-1"
     cidr_blocks = [var.anywhere-ip]
     description = "Egress Rule open for all port from anywhere"
   }
