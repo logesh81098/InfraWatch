@@ -13,6 +13,13 @@ resource "aws_security_group" "infrawatch-sg" {
     cidr_blocks = [var.my-ip]
     description = "Ingress rule for SSH from my IP Address"
   }
+  ingress {
+    from_port = var.prometheus-port
+    to_port = var.prometheus-port
+    protocol = "tcp"
+    cidr_blocks = [var.my-ip]
+    description = "Ingress rule for Prometheus"
+  }
   egress {
     from_port = 0
     to_port = 0

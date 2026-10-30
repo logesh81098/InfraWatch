@@ -13,3 +13,7 @@ variable "my-ip" {
 variable "anywhere-ip" {
   default = "0.0.0.0/0"
 }
+
+variable "prometheus-port" {
+  default = "9090"
+}
